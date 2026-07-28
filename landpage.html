@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neon Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="landpage.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>✨ Neon Tic Tac Toe ✨</h1>
+
+        <div class="top-controls">
+
+            <button id="themeBtn">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+    </header>
+
+    <div class="mode-box">
+
+        <button id="pvpBtn" class="active">
+            👥 Player vs Player
+        </button>
+
+        <button id="aiBtn">
+            🤖 Player vs AI
+        </button>
+
+    </div>
+
+    <div class="scoreboard">
+
+        <div class="card">
+            <h3>Player X</h3>
+            <span id="scoreX">0</span>
+        </div>
+
+        <div class="card">
+            <h3>Draw</h3>
+            <span id="drawScore">0</span>
+        </div>
+
+        <div class="card">
+            <h3>Player O</h3>
+            <span id="scoreO">0</span>
+        </div>
+
+    </div>
+
+    <div id="status">
+        Player X's Turn
+    </div>
+
+    <div class="board-container">
+
+        <div id="winLine"></div>
+
+        <div class="board">
+
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+
+        </div>
+
+    </div>
+
+    <div class="controls">
+
+        <button id="restartBtn">
+            🔄 Restart Round
+        </button>
+
+        <button id="newGameBtn">
+            🆕 New Game
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Winner Popup -->
+
+<div id="popup" class="popup">
+
+    <div class="popup-content">
+
+        <h2 id="popupText">
+            Player X Wins!
+        </h2>
+
+        <button id="playAgain">
+            Play Again
+        </button>
+
+    </div>
+
+</div>
+
+<script src="landpage.js"></script>
+
+</body>
+
+</html>

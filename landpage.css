@@ -1,0 +1,799 @@
+/*==========================
+        GOOGLE FONT
+==========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*==========================
+        ROOT COLORS
+==========================*/
+
+:root{
+
+    --bg:#07070d;
+    --card:#111827;
+    --board:#161b22;
+
+    --green:#39ff14;
+    --green-light:#78ff64;
+
+    --pink:#ff1493;
+    --pink-light:#ff66c4;
+
+    --white:#ffffff;
+    --text:#f5f5f5;
+    --shadow:rgba(57,255,20,.45);
+
+}
+
+/* Light Theme */
+
+body.light{
+
+    --bg:#f5fff8;
+    --card:#ffffff;
+    --board:#ffffff;
+
+    --green:#00c853;
+    --green-light:#69f0ae;
+
+    --pink:#ff4fa3;
+    --pink-light:#ff9fd1;
+
+    --text:#222;
+    --white:#111;
+}
+
+/*==========================
+        RESET
+==========================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    transition:.4s;
+
+}
+
+/*==========================
+      MAIN CONTAINER
+==========================*/
+
+.container{
+
+    width:95%;
+    max-width:850px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:var(--card);
+
+    border:2px solid var(--green);
+
+    box-shadow:
+    0 0 20px var(--green),
+    0 0 40px rgba(57,255,20,.2);
+
+    transition:.4s;
+
+}
+
+/*==========================
+          HEADER
+==========================*/
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+header h1{
+
+    font-size:2.6rem;
+
+    font-weight:700;
+
+    color:var(--green);
+
+    text-shadow:
+
+    0 0 8px var(--green),
+    0 0 20px var(--green),
+    0 0 35px var(--green);
+
+}
+
+/*==========================
+      TOP CONTROLS
+==========================*/
+
+.top-controls{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+#themeBtn{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:var(--pink);
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 0 12px var(--pink);
+
+}
+
+#themeBtn:hover{
+
+    transform:translateY(-3px) scale(1.05);
+
+    box-shadow:
+
+    0 0 18px var(--pink),
+    0 0 35px var(--pink);
+
+}
+
+/*==========================
+       MODE BUTTONS
+==========================*/
+
+.mode-box{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.mode-box button{
+
+    padding:14px 24px;
+
+    border:2px solid var(--green);
+
+    background:transparent;
+
+    color:var(--green);
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.mode-box button:hover{
+
+    background:var(--green);
+
+    color:#000;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 0 18px var(--green);
+
+}
+
+.mode-box button.active{
+
+    background:var(--pink);
+
+    color:white;
+
+    border-color:var(--pink);
+
+    box-shadow:
+
+    0 0 15px var(--pink),
+    0 0 30px var(--pink);
+
+}
+
+/*==========================
+        SCOREBOARD
+==========================*/
+
+.scoreboard{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:var(--board);
+
+    border:2px solid var(--green);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--pink);
+
+    box-shadow:
+
+    0 0 15px var(--pink),
+    0 0 25px var(--green);
+
+}
+
+.card h3{
+
+    color:var(--green);
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+.card span{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--pink);
+
+    text-shadow:
+
+    0 0 10px var(--pink);
+
+}
+
+/*==========================
+      STATUS TEXT
+==========================*/
+
+#status{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    font-size:1.4rem;
+
+    font-weight:600;
+
+    color:var(--green);
+
+    text-shadow:0 0 10px var(--green);
+
+}
+/*==========================
+      BOARD CONTAINER
+==========================*/
+
+.board-container{
+
+    margin:35px auto;
+    width:360px;
+    height:360px;
+    position:relative;
+
+}
+
+/*==========================
+        WIN LINE
+==========================*/
+
+#winLine{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:0;
+    height:6px;
+
+    background:var(--pink);
+
+    border-radius:20px;
+
+    transform:translate(-50%,-50%) rotate(0deg);
+
+    transition:width .5s ease;
+
+    box-shadow:
+    0 0 10px var(--pink),
+    0 0 20px var(--pink);
+
+    z-index:5;
+
+    pointer-events:none;
+
+}
+
+/*==========================
+          BOARD
+==========================*/
+
+.board{
+
+    width:100%;
+    height:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+
+    gap:12px;
+
+}
+
+/*==========================
+          CELLS
+==========================*/
+
+.cell{
+
+    background:var(--board);
+
+    border:2px solid var(--green);
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.3s;
+
+    box-shadow:
+    inset 0 0 12px rgba(255,255,255,.05);
+
+}
+
+.cell:hover{
+
+    transform:scale(1.07);
+
+    border-color:var(--pink);
+
+    box-shadow:
+    0 0 15px var(--green),
+    0 0 30px var(--pink);
+
+}
+
+.cell.x{
+
+    color:var(--green);
+
+    text-shadow:
+    0 0 10px var(--green),
+    0 0 20px var(--green);
+
+}
+
+.cell.o{
+
+    color:var(--pink);
+
+    text-shadow:
+    0 0 10px var(--pink),
+    0 0 20px var(--pink);
+
+}
+
+.cell.win{
+
+    animation:winner .8s infinite alternate;
+
+}
+
+/*==========================
+      WIN ANIMATION
+==========================*/
+
+@keyframes winner{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.12);
+
+        box-shadow:
+        0 0 20px var(--green),
+        0 0 40px var(--pink);
+
+    }
+
+}
+
+/*==========================
+      CONTROL BUTTONS
+==========================*/
+
+.controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.controls button{
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:var(--green);
+
+    color:#000;
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 12px var(--green);
+
+}
+
+.controls button:hover{
+
+    background:var(--pink);
+
+    color:#fff;
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 20px var(--pink),
+    0 0 35px var(--pink);
+
+}
+
+/*==========================
+          POPUP
+==========================*/
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.7);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:100;
+
+}
+
+.popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.popup-content{
+
+    width:320px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    background:var(--card);
+
+    border:2px solid var(--green);
+
+    box-shadow:
+    0 0 20px var(--green),
+    0 0 35px var(--pink);
+
+    animation:popup .35s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.7);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.popup-content h2{
+
+    color:var(--green);
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+
+}
+
+.popup-content button{
+
+    padding:12px 30px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:var(--pink);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.popup-content button:hover{
+
+    background:var(--green);
+
+    color:#000;
+
+    transform:scale(1.05);
+
+}
+
+/*==========================
+      SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--green);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+}
+
+header h1{
+
+    font-size:2rem;
+
+    text-align:center;
+
+}
+
+.scoreboard{
+
+    grid-template-columns:1fr;
+
+}
+
+.board-container{
+
+    width:300px;
+    height:300px;
+
+}
+
+.cell{
+
+    font-size:2.5rem;
+
+}
+
+.controls{
+
+    flex-direction:column;
+
+}
+
+.controls button{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:450px){
+
+.container{
+
+    padding:18px;
+
+}
+
+.board-container{
+
+    width:270px;
+    height:270px;
+
+}
+
+.cell{
+
+    font-size:2.2rem;
+
+}
+
+#status{
+
+    font-size:1.1rem;
+
+}
+
+header h1{
+
+    font-size:1.7rem;
+
+}
+
+.mode-box{
+
+    flex-direction:column;
+
+}
+
+.mode-box button{
+
+    width:100%;
+
+}
+
+}
