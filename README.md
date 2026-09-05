@@ -37,11 +37,6 @@ interface, interactive game logic and responsive design.
 > real-world JavaScript and front-end development skills.
 
 ---
-## 🌐 Live Demo
-
-🚀 **[Play Game live]
-(https://sakshamsharma3006-learner.github.io/TIC-TAC-TOE-GAME/)**
----
 
 ## ✨ Key Features
 
